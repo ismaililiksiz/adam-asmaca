@@ -36,36 +36,44 @@ namespace adam_asmaca
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 15);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(575, 113);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(767, 108);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(611, 12);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Location = new System.Drawing.Point(807, 30);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 67);
+            this.button1.Size = new System.Drawing.Size(236, 82);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Oyuna Başla";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(12, 144);
+            this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(16, 177);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(575, 127);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(767, 83);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

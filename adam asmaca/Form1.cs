@@ -34,33 +34,58 @@ namespace adam_asmaca
         char[] alfabe = new char[29];
         string[] sehirler = new string[10];
         int sehir_uzunlugu;
-        string sehirr;
+        string sehir;
+        bool oyunbasladi = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Random rastgele = new Random();
-            int rastgelesehir = rastgele.Next(0, sehirler.Length);
-            char[] alfabe = "ABCÇDEFGĞHİIJKLMNOÖPRSŞTUÜVYZ".ToCharArray();
-            sehirr = sehirler[rastgelesehir];
 
-
-            for (int i = 0; i < alfabe.Length; i++)
+            if (oyunbasladi == true)
             {
-                Button btn = new Button();
-                btn.Name = alfabe[i].ToString();
-                btn.Text = alfabe[i].ToString();
-                btn.Width = 32;
-                btn.Height = 32;
-                flowLayoutPanel1.Controls.Add(btn);
+                Application.Exit();
             }
-            sehir_uzunlugu = sehirr.Length;
-            for (int i = 0; i < sehirr.Length; i++)
+            else
             {
-                TextBox txt = new TextBox();
-                txt.Name = 
-            }
+                oyunbasladi = true;
+                Random rastgele = new Random();
+                int rastgelesehir = rastgele.Next(0, sehirler.Length);
+                char[] alfabe = "ABCÇDEFGĞHİIJKLMNOÖPRSŞTUÜVYZ".ToCharArray();
+                sehir = sehirler[rastgelesehir];
 
-            
+
+                for (int i = 0; i < alfabe.Length; i++)
+                {
+                    Button btn = new Button();
+                    btn.Name = "btn" + alfabe[i].ToString();
+                    btn.Text = alfabe[i].ToString();
+                    btn.Width = 32;
+                    btn.Height = 32;
+                    flowLayoutPanel1.Controls.Add(btn);
+                //    btn.Click += new EventHandler(btn_Click);
+                    Controls.Add(btn);
+                }
+                sehir_uzunlugu = sehir.Length;
+                for (int i = 0; i < sehir.Length; i++)
+                {
+                    TextBox txt = new TextBox();
+                    txt.Name = "txt" + alfabe[i].ToString();
+                    txt.Width = 32;
+                    txt.Height = 32;
+                    flowLayoutPanel2.Controls.Add(txt);
+                }
+               // private void btn_Click(object sender, EventArgs e)
+               // {
+               //     MessageBox.Show("Test");
+               // }
+
+
+
+
+
+
+
+
+            }
         }
     }
 }
